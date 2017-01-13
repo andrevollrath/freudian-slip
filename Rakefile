@@ -7,11 +7,11 @@ task :default => :spec
 
 task :console do
   require 'pry'
-  require 'gem_name'
+  require 'freudian_slip'
 
   def reload!
     # Change 'gem_name' here too:
-    files = $LOADED_FEATURES.select { |feat| feat =~ /\/gem_name\// }
+    files = $LOADED_FEATURES.select { |feat| feat =~ /\/freudian_slip\// }
     files.each { |file| load file }
   end
 
