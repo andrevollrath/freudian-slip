@@ -1,5 +1,0 @@
-class FreudianSlip::Fonebook
-
-  
-
-end

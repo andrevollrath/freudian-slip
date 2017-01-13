@@ -4,15 +4,15 @@ class FreudianSlip::Counselor
 					       :url, :source, :cost, :insurance, :specialties,
 					       :focus, :treatment, :bio
 
-#  @@all = []
-#
-#  def self.all
-#    @@all
-#  end  
-#
-#  def save
-#    self.all << self
-#  end
+  @@all = []
+  
+  def self.all
+    @@all
+  end  
+  
+  def save
+    self.all << self
+  end
 
   #Opens URL in favorite terminal
   def contact_counselor
@@ -26,10 +26,10 @@ class FreudianSlip::Counselor
     self.source.call(self)    
   end
 
-  def print_basic
+  def self.print_basic
   end
 
-  def print_all
+  def self.print_all
   end
 
 end
