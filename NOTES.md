@@ -6,6 +6,30 @@ Scraper
 Counselor
 
 
+CLI Patterns
+Gets URL
+Calls Scraper for Counselors
+Lists Counselors
+Shows Menu
+INP> Select a Counselor for more information?
+IF then 
+INP> Would you like to contact NAME now?
+Yes, open URL in browser
+Else list again, new search or exit.
+
+
+OO  Question should Counselors know about scraper?
+    Should scrape know about Counselors,?
+
+    What if I add a fonebook. Fonebook, holds all my counselors,
+    Fonebook knows how to list counselors, provide more details,
+    how to contact counselors. Scrape sends hash of counselors to
+    phonebook who records and then operates on them. Counselors
+    are counselors and know who themselves but that's about it.
+
+    Scrape send counselors to phonebook? Ya no hash objects instead.
+
+
 CLI
 
 1. Asks for zip code

@@ -20,7 +20,31 @@
 #LIST 3
 #Description
 #Grabs first paragraph
+#
+# 
+#Accessors
+#
+#
+# 
+#
+#
+
+
 
 class FreudianSlip::Counselor
+
+  @@all = []
+
+	attr_accessor 	:name, :certifications, :zip, :phone, :sex, 
+					:url, :cost, :insurance, :specialties,
+					:focus, :treatment, :description
+
+  def self.all
+    @@all
+  end
+
+  
+
+
 
 end
