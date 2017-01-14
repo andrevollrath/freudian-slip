@@ -1,8 +1,7 @@
 class FreudianSlip::Counselor
 
-	attr_accessor	 :name, :certifications, :zip, :phone, :sex, 
-					       :url, :source, :cost, :insurance, :specialties,
-					       :focus, :treatment, :bio
+	attr_accessor	:name, :title, :phone, :url, :source, :cost, :insurance,
+                :specialties, :focus, :treatment, :bio
 
   @@all = []
   
@@ -11,7 +10,7 @@ class FreudianSlip::Counselor
   end  
   
   def save
-    self.all << self
+    @@all << self
   end
 
   #Opens URL in favorite terminal

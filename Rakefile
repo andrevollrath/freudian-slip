@@ -15,6 +15,10 @@ task :console do
     files.each { |file| load file }
   end
 
+  def doc!
+    doc = FreudianSlip::Scraper.scrape_counselors
+  end
+
   ARGV.clear
   Pry.start
 end

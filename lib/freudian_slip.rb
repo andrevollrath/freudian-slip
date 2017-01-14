@@ -2,8 +2,9 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-require "freudian_slip/version"
-
 module FreudianSlip
-  # Your code goes here...
+  require "freudian_slip/version"
+  require "freudian_slip/cli"
+  require "freudian_slip/counselor"
+  require "freudian_slip/scraper"
 end
