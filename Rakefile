@@ -16,7 +16,7 @@ task :console do
   end
 
   def doc!
-    doc = FreudianSlip::Scraper.scrape_counselors
+    doc = FreudianSlip::Scraper.scrape_counselor
   end
 
   ARGV.clear

@@ -1,7 +1,7 @@
 class FreudianSlip::Counselor
 
 	attr_accessor	:name, :title, :phone, :url, :source, :cost, :insurance,
-                :specialties, :focus, :treatment, :bio
+                :specialties, :focus, :treatment, :bio, :cure_rate
 
   @@all = []
   
