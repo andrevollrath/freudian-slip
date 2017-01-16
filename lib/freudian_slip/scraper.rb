@@ -1,8 +1,8 @@
 class FreudianSlip::Scraper
 
   def self.scrape_counselors(zip = 10004)
-    #url = "https://therapists.psychologytoday.com/rms/prof_results.php?search=#{zip}"
-    url = "./fixtures/test.html"
+    url = "https://therapists.psychologytoday.com/rms/prof_results.php?search=#{zip}"
+    #url = "./fixtures/test.html"
     doc = Nokogiri::HTML(open(url))
     doc = doc.css("div[itemtype='http://schema.org/Person']")
 
@@ -15,12 +15,11 @@ class FreudianSlip::Scraper
       counselor.source = FreudianSlip::Scraper.method(:scrape_counselor)
       counselor.save
     end
-    FreudianSlip::Counselor.all
   end
 
   def self.scrape_counselor(freud)
     
-    url = "./fixtures/meredith.html"
+    url = "https://therapists.psychologytoday.com/#{freud.url}"
     doc = Nokogiri::HTML(open(url))
     doc = doc.css("div #profile-content")
 
@@ -33,6 +32,5 @@ class FreudianSlip::Scraper
     freud.insurance = doc.detect {|x| /Accepts/ === x}  #Insurance
     freud.cure_rate = "Cure rate: #{rand(10..100)}%" #Cure rate
   end
-
 end
 

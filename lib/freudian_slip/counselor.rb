@@ -1,7 +1,7 @@
 class FreudianSlip::Counselor
 
 	attr_accessor	:name, :title, :phone, :url, :source, :cost, :insurance,
-                :specialties, :treatment, :bio, :cure_rate
+                :specialties, :bio, :cure_rate
 
   @@all = []
   
@@ -14,7 +14,7 @@ class FreudianSlip::Counselor
   end
 
   def contact_counselor
-    system("open '#{self.url}'")
+    system("xdg-open", "https://therapists.psychologytoday.com/#{self.url}")
   end
 
   def get_details
